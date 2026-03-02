@@ -9,6 +9,17 @@ struct LoginView: View {
     @State private var errorMessage: String?
     @State private var showSignUp = false
 
+    // Rate limiting: lock out after 5 consecutive failures
+    @State private var failureCount = 0
+    @State private var lockoutUntil: Date?
+    private let maxFailures = 5
+    private let lockoutDuration: TimeInterval = 60 // seconds
+
+    private var isLockedOut: Bool {
+        guard let until = lockoutUntil else { return false }
+        return Date.now < until
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -49,7 +60,7 @@ struct LoginView: View {
                             if let error = errorMessage {
                                 Text(error)
                                     .font(.footnote)
-                                    .foregroundStyle(.red)
+                                    .foregroundStyle(isLockedOut ? .orange : .red)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal, 4)
                             }
@@ -105,11 +116,17 @@ struct LoginView: View {
     }
 
     private var canSubmit: Bool {
+        !isLockedOut &&
         !email.trimmingCharacters(in: .whitespaces).isEmpty &&
-        password.count >= 6
+        password.count >= 8
     }
 
     private func login() async {
+        guard !isLockedOut else {
+            let remaining = Int((lockoutUntil ?? .now).timeIntervalSinceNow.rounded(.up))
+            errorMessage = "Too many failed attempts. Try again in \(remaining)s."
+            return
+        }
         isLoading = true
         errorMessage = nil
         do {
@@ -117,10 +134,32 @@ struct LoginView: View {
                 email: email.trimmingCharacters(in: .whitespaces),
                 password: password
             )
+            failureCount = 0
+            lockoutUntil = nil
         } catch {
-            errorMessage = error.localizedDescription
+            failureCount += 1
+            if failureCount >= maxFailures {
+                lockoutUntil = Date.now.addingTimeInterval(lockoutDuration)
+                errorMessage = "Too many failed attempts. Please wait 60 seconds."
+            } else {
+                errorMessage = authErrorMessage(for: error)
+            }
         }
         isLoading = false
+    }
+
+    private func authErrorMessage(for error: Error) -> String {
+        let msg = error.localizedDescription.lowercased()
+        if msg.contains("invalid login") || msg.contains("invalid credentials") || msg.contains("wrong password") {
+            return "Incorrect email or password. Please try again."
+        } else if msg.contains("email not confirmed") || msg.contains("not confirmed") {
+            return "Please verify your email before signing in."
+        } else if msg.contains("network") || msg.contains("connection") || msg.contains("offline") {
+            return "No internet connection. Please check your network and try again."
+        } else if msg.contains("too many") || msg.contains("rate limit") {
+            return "Too many attempts. Please wait a moment and try again."
+        }
+        return "Sign in failed. Please try again."
     }
 }
 

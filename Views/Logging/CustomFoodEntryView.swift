@@ -21,12 +21,12 @@ struct CustomFoodEntryView: View {
 
     private let servingUnits = ["piece", "katori", "plate", "glass", "bowl", "cup", "tsp", "tbsp", "g", "ml"]
 
-    // Parsed numeric helpers
-    private var calories: Double { Double(caloriesText) ?? 0 }
-    private var protein: Double  { Double(proteinText) ?? 0 }
-    private var carbs: Double    { Double(carbsText) ?? 0 }
-    private var fat: Double      { Double(fatText) ?? 0 }
-    private var servingSize: Double { Double(servingSizeText) ?? 1 }
+    // Parsed numeric helpers — clamped to realistic ranges
+    private var calories: Double    { (Double(caloriesText) ?? 0).clamped(to: 0...5000) }
+    private var protein: Double     { (Double(proteinText) ?? 0).clamped(to: 0...500) }
+    private var carbs: Double       { (Double(carbsText) ?? 0).clamped(to: 0...500) }
+    private var fat: Double         { (Double(fatText) ?? 0).clamped(to: 0...500) }
+    private var servingSize: Double { (Double(servingSizeText) ?? 1).clamped(to: 0.1...999) }
 
     private var isValid: Bool {
         !name.trimmingCharacters(in: .whitespaces).isEmpty && calories > 0
@@ -199,7 +199,14 @@ struct CustomFoodEntryView: View {
                 onSave?(food)
                 dismiss()
             } catch {
-                errorMessage = error.localizedDescription
+                let msg = error.localizedDescription.lowercased()
+                if msg.contains("network") || msg.contains("offline") || msg.contains("connection") {
+                    errorMessage = "No internet connection. The food was not saved to your account."
+                } else if msg.contains("unauthorized") || msg.contains("not authenticated") {
+                    errorMessage = "You must be signed in to save custom foods."
+                } else {
+                    errorMessage = "Failed to save food. Please try again."
+                }
                 showError = true
             }
             isSaving = false
@@ -273,12 +280,16 @@ private struct NutritionField: View {
     }
 }
 
-// MARK: - Double formatted helper (same as FoodDetailView)
+// MARK: - Double helpers
 
 private extension Double {
     func formatted() -> String {
         truncatingRemainder(dividingBy: 1) == 0
             ? String(format: "%.0f", self)
             : String(format: "%.1f", self)
+    }
+
+    func clamped(to range: ClosedRange<Double>) -> Double {
+        min(max(self, range.lowerBound), range.upperBound)
     }
 }

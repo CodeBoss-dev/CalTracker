@@ -38,7 +38,7 @@ struct SignUpView: View {
                         )
 
                         AuthSecureField(
-                            placeholder: "Password (min 6 characters)",
+                            placeholder: "Password (min 8 characters)",
                             text: $password,
                             icon: "lock.fill"
                         )
@@ -50,9 +50,9 @@ struct SignUpView: View {
                         )
 
                         // Validation messages
-                        if !password.isEmpty && password.count < 6 {
+                        if !password.isEmpty && password.count < 8 {
                             ValidationRow(
-                                message: "Password must be at least 6 characters",
+                                message: "Password must be at least 8 characters",
                                 isValid: false
                             )
                         }
@@ -64,7 +64,7 @@ struct SignUpView: View {
                             )
                         }
 
-                        if !confirmPassword.isEmpty && password == confirmPassword && password.count >= 6 {
+                        if !confirmPassword.isEmpty && password == confirmPassword && password.count >= 8 {
                             ValidationRow(
                                 message: "Passwords match",
                                 isValid: true
@@ -141,7 +141,7 @@ struct SignUpView: View {
 
     private var canSubmit: Bool {
         !email.trimmingCharacters(in: .whitespaces).isEmpty &&
-        password.count >= 6 &&
+        password.count >= 8 &&
         password == confirmPassword
     }
 
@@ -158,9 +158,23 @@ struct SignUpView: View {
                 showConfirmation = true
             }
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = signUpErrorMessage(for: error)
         }
         isLoading = false
+    }
+
+    private func signUpErrorMessage(for error: Error) -> String {
+        let msg = error.localizedDescription.lowercased()
+        if msg.contains("already registered") || msg.contains("already in use") || msg.contains("user already exists") {
+            return "An account with this email already exists. Try signing in."
+        } else if msg.contains("invalid email") || msg.contains("valid email") {
+            return "Please enter a valid email address."
+        } else if msg.contains("password") && (msg.contains("weak") || msg.contains("short")) {
+            return "Password is too weak. Please choose a stronger password."
+        } else if msg.contains("network") || msg.contains("connection") || msg.contains("offline") {
+            return "No internet connection. Please check your network and try again."
+        }
+        return "Account creation failed. Please try again."
     }
 }
 

@@ -1,14 +1,14 @@
-# CalTracker — Indian Diet Calorie Tracker
+# CalTracker — Calorie & Nutrition Tracker
 
-A native iOS app built with SwiftUI for tracking calories on an Indian college mess diet. Designed around the Royal Foods (Pune) 3-week rotating menu with a comprehensive Indian food database.
+A native iOS app built with SwiftUI for tracking daily calories, macros, and weight. Features a curated Indian food database, rotating meal plans, smart suggestions, and detailed progress analytics.
 
 ---
 
 ## Features
 
-- **One-tap mess menu logging** — browse this week's mess schedule and log entire meals in seconds
+- **Meal plan logging** — browse a weekly rotating menu and log entire meals in seconds
 - **Indian food database** — 205+ dishes with culturally accurate serving sizes ("1 chapati", "1 katori dal")
-- **Smart suggestions** — AI-style recommendations from today's menu to hit your macro targets
+- **Smart suggestions** — recommendations from today's menu to help hit your macro targets
 - **Dashboard** — animated calorie ring, macro breakdown, per-meal summaries
 - **Progress tracking** — weight log, 7-day calorie chart, 30-day averages, streak counter
 - **Goal editor** — customise calorie and macro targets with a live macro balance bar
@@ -47,7 +47,7 @@ CalTracker/
 │   ├── AuthService.swift          # Sign up / sign in / onboarding
 │   ├── FoodService.swift          # Search foods (Supabase + local fallback)
 │   ├── FoodLogService.swift       # Log/delete entries, UserDefaults persistence
-│   ├── MessMenuService.swift      # Load & cache mess menu JSON
+│   ├── MessMenuService.swift      # Load & cache meal plan JSON
 │   ├── GoalsService.swift         # Persist + sync calorie/macro targets
 │   ├── WeightLogService.swift     # Weight log CRUD
 │   └── SuggestionEngine.swift     # Pure stateless suggestion logic
@@ -60,8 +60,8 @@ CalTracker/
 ├── Views/
 │   ├── Auth/                      # Login, SignUp, Onboarding
 │   ├── Dashboard/                 # CalorieRing, MacroBars, MealCards, Suggestions
-│   ├── Logging/                   # FoodSearch, FoodDetail, MealLog, MessMenuLog
-│   ├── MessMenu/                  # WeeklyMenu, MessMenuConfig
+│   ├── Logging/                   # FoodSearch, FoodDetail, MealLog, MenuLog
+│   ├── MessMenu/                  # WeeklyMenu, MenuConfig
 │   ├── Progress/                  # Charts, WeightEntry, Streaks
 │   ├── Profile/                   # Profile, GoalEditor
 │   └── Components/                # ServingStepperView
@@ -69,13 +69,13 @@ CalTracker/
 │   ├── Theme/AppTheme.swift       # Spacing + radius tokens
 │   ├── Extensions/ColorExtension.swift  # Color(hex:) + app color palette
 │   └── Utilities/
-│       ├── WeekResolver.swift     # 3-week mess cycle calculator
+│       ├── WeekResolver.swift     # Rotating menu cycle calculator
 │       └── NutritionCalculator.swift    # BMR, TDEE, macro targets
 └── Resources/
     ├── IndianFoodSeed.json        # 205 Indian dishes
-    ├── MessMenuWeek1.json         # Royal Foods week 1
-    ├── MessMenuWeek2.json         # Royal Foods week 2
-    └── MessMenuWeek3.json         # Royal Foods week 3
+    ├── MessMenuWeek1.json         # Menu plan week 1
+    ├── MessMenuWeek2.json         # Menu plan week 2
+    └── MessMenuWeek3.json         # Menu plan week 3
 ```
 
 ---
@@ -190,7 +190,7 @@ alter table public.food_log enable row level security;
 create policy "Users can read/write own food log" on public.food_log
   for all using (auth.uid() = user_id);
 
--- Mess menus
+-- Meal plan menus
 create table public.mess_menus (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users(id) on delete cascade not null,
@@ -200,7 +200,7 @@ create table public.mess_menus (
   food_ids uuid[] not null default '{}'
 );
 alter table public.mess_menus enable row level security;
-create policy "Users can read/write own mess menus" on public.mess_menus
+create policy "Users can read/write own meal plans" on public.mess_menus
   for all using (auth.uid() = user_id);
 
 -- Weight log
@@ -220,7 +220,7 @@ create policy "Users can read/write own weight log" on public.weight_log
 
 ## Default Targets
 
-The app is pre-configured for a ~500 kcal/day deficit. Goals are fully editable in the Profile tab.
+Default targets are set for a moderate calorie deficit. Goals are fully editable in the Profile tab.
 
 | Macro | Target |
 |---|---|
@@ -231,9 +231,9 @@ The app is pre-configured for a ~500 kcal/day deficit. Goals are fully editable 
 
 ---
 
-## Mess Menu Cycle
+## Rotating Menu Cycle
 
-The 3-week rotating menu uses an anchor date of **Monday, Feb 16, 2026 = Week 3**, cycling `[3 → 2 → 1 → 3 → ...]`. The `WeekResolver` utility handles all date arithmetic automatically.
+The app supports a 3-week rotating meal plan. The `WeekResolver` utility handles all date arithmetic automatically, so the correct week's menu is always shown.
 
 ---
 

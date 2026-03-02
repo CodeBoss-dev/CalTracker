@@ -43,7 +43,10 @@ final class FoodLogService: ObservableObject {
 
     private var allItems: [LoggedItem] = []
     private let client = SupabaseManager.shared.client
-    private let storageKey = "caltracker_food_log_v1"
+    private let storageURL: URL = {
+        let dir = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        return dir.appendingPathComponent("caltracker_food_log_v1.json")
+    }()
 
     private static let encoder: JSONEncoder = {
         let e = JSONEncoder()
@@ -156,16 +159,18 @@ final class FoodLogService: ObservableObject {
         return fmt.string(from: date)
     }
 
-    // MARK: - Persistence (UserDefaults)
+    // MARK: - Persistence (encrypted file storage)
 
     private func saveToDisk() {
         guard let data = try? Self.encoder.encode(allItems) else { return }
-        UserDefaults.standard.set(data, forKey: storageKey)
+        let dir = storageURL.deletingLastPathComponent()
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        try? data.write(to: storageURL, options: [.atomic, .completeFileProtection])
     }
 
     private func loadFromDisk() {
         guard
-            let data = UserDefaults.standard.data(forKey: storageKey),
+            let data = try? Data(contentsOf: storageURL),
             let items = try? Self.decoder.decode([LoggedItem].self, from: data)
         else { return }
         allItems = items

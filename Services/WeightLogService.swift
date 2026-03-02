@@ -14,7 +14,10 @@ final class WeightLogService: ObservableObject {
     @Published private(set) var entries: [WeightEntry] = []
 
     private let client = SupabaseManager.shared.client
-    private let storageKey = "caltracker_weight_log_v1"
+    private let storageURL: URL = {
+        let dir = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        return dir.appendingPathComponent("caltracker_weight_log_v1.json")
+    }()
 
     private static let encoder: JSONEncoder = {
         let e = JSONEncoder()
@@ -68,16 +71,18 @@ final class WeightLogService: ObservableObject {
             .sorted { $0.date < $1.date }
     }
 
-    // MARK: - Persistence (UserDefaults)
+    // MARK: - Persistence (encrypted file storage)
 
     private func saveToDisk() {
         guard let data = try? Self.encoder.encode(entries) else { return }
-        UserDefaults.standard.set(data, forKey: storageKey)
+        let dir = storageURL.deletingLastPathComponent()
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        try? data.write(to: storageURL, options: [.atomic, .completeFileProtection])
     }
 
     private func loadFromDisk() {
         guard
-            let data = UserDefaults.standard.data(forKey: storageKey),
+            let data = try? Data(contentsOf: storageURL),
             let saved = try? Self.decoder.decode([WeightEntry].self, from: data)
         else { return }
         entries = saved.sorted { $0.date > $1.date }

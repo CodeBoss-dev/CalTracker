@@ -27,13 +27,18 @@ final class GoalsService: ObservableObject {
 
     static let shared = GoalsService()
 
-    private let udKey  = "caltracker_user_goals_v1"
+    private let storageURL: URL = {
+        let dir = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        return dir.appendingPathComponent("caltracker_user_goals_v1.json")
+    }()
     private let client = SupabaseManager.shared.client
 
     @Published private(set) var goals: StoredGoals
 
     private init() {
-        if let data   = UserDefaults.standard.data(forKey: "caltracker_user_goals_v1"),
+        let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("caltracker_user_goals_v1.json")
+        if let data   = try? Data(contentsOf: url),
            let stored = try? JSONDecoder().decode(StoredGoals.self, from: data) {
             goals = stored
         } else {
@@ -55,12 +60,13 @@ final class GoalsService: ObservableObject {
         Task { await saveToSupabase() }
     }
 
-    // MARK: - Local persistence
+    // MARK: - Local persistence (encrypted file storage)
 
     private func persist() {
-        if let data = try? JSONEncoder().encode(goals) {
-            UserDefaults.standard.set(data, forKey: udKey)
-        }
+        guard let data = try? JSONEncoder().encode(goals) else { return }
+        let dir = storageURL.deletingLastPathComponent()
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        try? data.write(to: storageURL, options: [.atomic, .completeFileProtection])
     }
 
     // MARK: - Supabase sync
