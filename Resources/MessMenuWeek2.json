@@ -1,0 +1,298 @@
+[
+  {
+    "week_number": 2,
+    "day_of_week": "monday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "idli_sambhar", "name": "Idli Sambhar", "calories": 200, "protein": 6.0, "carbs": 38.0, "fat": 3.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "upma", "name": "Upma", "calories": 220, "protein": 5.0, "carbs": 38.0, "fat": 6.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chocos", "name": "Chocos", "calories": 180, "protein": 4.0, "carbs": 34.0, "fat": 3.0, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "monday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "lassi", "name": "Lassi", "calories": 150, "protein": 5.0, "carbs": 22.0, "fat": 4.0, "serving_unit": "glass", "serving_size": 1.0 },
+      { "id": "chole_findi", "name": "Chole Pindi", "calories": 210, "protein": 10.0, "carbs": 28.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "veg_manchurian", "name": "Veg Manchurian", "calories": 180, "protein": 5.0, "carbs": 22.0, "fat": 8.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "dal_tadka", "name": "Dal Tadka", "calories": 130, "protein": 8.0, "carbs": 18.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "steamed_rice", "name": "Steamed Rice", "calories": 200, "protein": 4.0, "carbs": 44.0, "fat": 0.5, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "dabeli", "name": "Dabeli", "calories": 220, "protein": 5.0, "carbs": 34.0, "fat": 8.0, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "methi_mutter_malai", "name": "Methi Mutter Malai", "calories": 220, "protein": 8.0, "carbs": 14.0, "fat": 15.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "monday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "shengdana_chutney", "name": "Shengdana Chutney", "calories": 60, "protein": 3.0, "carbs": 4.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "shahi_tukda", "name": "Shahi Tukda", "calories": 280, "protein": 6.0, "carbs": 40.0, "fat": 11.0, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "steamed_rice_dal", "name": "Steam Rice", "calories": 200, "protein": 4.0, "carbs": 44.0, "fat": 0.5, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "dal_fry", "name": "Dal Fry", "calories": 140, "protein": 8.0, "carbs": 18.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "tuesday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "tarri_poha", "name": "Tarri Poha", "calories": 280, "protein": 7.0, "carbs": 48.0, "fat": 6.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "misal_pav", "name": "Misal Pav", "calories": 380, "protein": 12.0, "carbs": 58.0, "fat": 10.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "cornflakes", "name": "Corn Flakes", "calories": 180, "protein": 4.0, "carbs": 36.0, "fat": 2.0, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "tuesday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "jaljeera", "name": "Jaljeera", "calories": 30, "protein": 0.5, "carbs": 6.0, "fat": 0.5, "serving_unit": "glass", "serving_size": 1.0 },
+      { "id": "veg_dum_biryani", "name": "Veg Dum Biryani", "calories": 380, "protein": 8.0, "carbs": 65.0, "fat": 10.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "mixed_sprout_usal", "name": "Mixed Sprout Usal", "calories": 170, "protein": 10.0, "carbs": 22.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "dal_tadka", "name": "Dal Tadka", "calories": 130, "protein": 8.0, "carbs": 18.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "dahi_bhalla", "name": "Dahi Bhalla", "calories": 220, "protein": 8.0, "carbs": 32.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "lemon_onion_pickle", "name": "Lemon / Onion / Pickle", "calories": 25, "protein": 0.5, "carbs": 4.0, "fat": 1.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "papad", "name": "Papad", "calories": 35, "protein": 2.0, "carbs": 6.0, "fat": 0.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "samosa", "name": "Samosa", "calories": 130, "protein": 3.0, "carbs": 17.0, "fat": 6.0, "serving_unit": "piece", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "tuesday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "pickle_achaar", "name": "Pickle / Achaar", "calories": 20, "protein": 0.0, "carbs": 2.0, "fat": 1.5, "serving_unit": "tsp", "serving_size": 1.0 },
+      { "id": "gajar_halwa", "name": "Gajar Halwa", "calories": 260, "protein": 5.0, "carbs": 42.0, "fat": 9.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "dal_makhani", "name": "Dal Makhani", "calories": 180, "protein": 9.0, "carbs": 18.0, "fat": 8.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "veg_pulao", "name": "Vegetable Pulao", "calories": 280, "protein": 6.0, "carbs": 52.0, "fat": 6.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "tadka_pithala", "name": "Tadka Pithala", "calories": 160, "protein": 6.0, "carbs": 20.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "wednesday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "boiled_egg", "name": "Boiled Egg", "calories": 140, "protein": 12.0, "carbs": 1.0, "fat": 10.0, "serving_unit": "piece", "serving_size": 2.0 },
+      { "id": "sprout_cucumber_chaat", "name": "Sprout Cucumber Chaat", "calories": 120, "protein": 7.0, "carbs": 18.0, "fat": 2.0, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "bournvita", "name": "Bournvita", "calories": 120, "protein": 3.0, "carbs": 22.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "wednesday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "kokam_sharbat", "name": "Kokam Sharbat", "calories": 50, "protein": 0.0, "carbs": 12.0, "fat": 0.0, "serving_unit": "glass", "serving_size": 1.0 },
+      { "id": "egg_curry", "name": "Egg Curry", "calories": 220, "protein": 14.0, "carbs": 8.0, "fat": 14.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "palak_paneer", "name": "Palak Paneer", "calories": 230, "protein": 13.0, "carbs": 10.0, "fat": 17.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "jeera_rice", "name": "Jeera Rice", "calories": 250, "protein": 4.0, "carbs": 48.0, "fat": 5.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "dal_fry", "name": "Dal Fry", "calories": 140, "protein": 8.0, "carbs": 18.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "white_sauce_pasta", "name": "White Sauce Pasta", "calories": 280, "protein": 9.0, "carbs": 40.0, "fat": 10.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "gawar_bhaji", "name": "Gawar Bhaji", "calories": 110, "protein": 4.0, "carbs": 14.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "dal_kolhapuri", "name": "Dal Kolhapuri", "calories": 150, "protein": 8.0, "carbs": 19.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "steamed_rice", "name": "Steamed Rice", "calories": 200, "protein": 4.0, "carbs": 44.0, "fat": 0.5, "serving_unit": "plate", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "wednesday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "gulab_jamun", "name": "Gulab Jamun", "calories": 150, "protein": 2.0, "carbs": 28.0, "fat": 4.0, "serving_unit": "piece", "serving_size": 2.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "steamed_rice", "name": "Steam Rice", "calories": 200, "protein": 4.0, "carbs": 44.0, "fat": 0.5, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "dal_kolhapuri", "name": "Dal Kolhapuri", "calories": 150, "protein": 8.0, "carbs": 19.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "gawar_bhaji", "name": "Gawar Bhaji", "calories": 110, "protein": 4.0, "carbs": 14.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "thursday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "medu_wada_sambhar", "name": "Medu Wada / Sambar", "calories": 280, "protein": 8.0, "carbs": 38.0, "fat": 10.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "sabudana_khichadi", "name": "Sabudana Khichadi", "calories": 300, "protein": 3.0, "carbs": 55.0, "fat": 8.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chocos", "name": "Chocos", "calories": 180, "protein": 4.0, "carbs": 34.0, "fat": 3.0, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "thursday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "buttermilk", "name": "Butter Milk", "calories": 60, "protein": 3.0, "carbs": 8.0, "fat": 1.5, "serving_unit": "glass", "serving_size": 1.0 },
+      { "id": "gobi_mutter", "name": "Gobi Mutter", "calories": 160, "protein": 6.0, "carbs": 20.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "rajma_masala", "name": "Rajma Masala", "calories": 180, "protein": 10.0, "carbs": 25.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "jeera_rice", "name": "Jeera Rice", "calories": 250, "protein": 4.0, "carbs": 48.0, "fat": 5.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "dal_amritsari", "name": "Dal Amritsari", "calories": 160, "protein": 9.0, "carbs": 20.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "papad", "name": "Papad", "calories": 35, "protein": 2.0, "carbs": 6.0, "fat": 0.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "aloo_mutter", "name": "Aloo Mutter", "calories": 170, "protein": 5.0, "carbs": 24.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "poori", "name": "Poori", "calories": 150, "protein": 2.5, "carbs": 19.0, "fat": 7.0, "serving_unit": "piece", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "thursday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "shengdana_chutney", "name": "Shengdana Chutney", "calories": 60, "protein": 3.0, "carbs": 4.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "fruit_custard", "name": "Fruit Custard", "calories": 180, "protein": 4.0, "carbs": 30.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "cucumber_raita", "name": "Cucumber Raita", "calories": 80, "protein": 4.0, "carbs": 8.0, "fat": 3.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "veg_biryani", "name": "Veg Biryani", "calories": 380, "protein": 8.0, "carbs": 65.0, "fat": 10.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "friday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "tarri_poha", "name": "Tarri Poha", "calories": 280, "protein": 7.0, "carbs": 48.0, "fat": 6.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "egg_omelet", "name": "Egg Omelet", "calories": 180, "protein": 12.0, "carbs": 2.0, "fat": 13.0, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "cornflakes", "name": "Corn Flakes", "calories": 180, "protein": 4.0, "carbs": 36.0, "fat": 2.0, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "friday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "lemon_water", "name": "Lemon Water", "calories": 20, "protein": 0.0, "carbs": 5.0, "fat": 0.0, "serving_unit": "glass", "serving_size": 1.0 },
+      { "id": "veg_kofta", "name": "Veg Kofta", "calories": 200, "protein": 5.0, "carbs": 18.0, "fat": 12.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chawli_masala", "name": "Chawli Masala", "calories": 160, "protein": 8.0, "carbs": 22.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "plain_rice", "name": "Plain Rice", "calories": 200, "protein": 4.0, "carbs": 44.0, "fat": 0.5, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "dal_palak", "name": "Dal Palak", "calories": 140, "protein": 8.0, "carbs": 18.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "bread_chutney", "name": "Bread Chutney", "calories": 120, "protein": 3.0, "carbs": 18.0, "fat": 4.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "malai_paneer", "name": "Malai Paneer", "calories": 260, "protein": 13.0, "carbs": 6.0, "fat": 21.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "green_pakoda", "name": "Green Pakoda", "calories": 150, "protein": 4.0, "carbs": 18.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "friday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "khaur_rabdi", "name": "Khaur Rabdi", "calories": 220, "protein": 5.0, "carbs": 35.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "dal_lasooni", "name": "Dal Lasooni", "calories": 140, "protein": 8.0, "carbs": 18.0, "fat": 4.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "jeera_rice", "name": "Jeera Rice", "calories": 250, "protein": 4.0, "carbs": 48.0, "fat": 5.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "egg_masala", "name": "Egg Masala", "calories": 190, "protein": 14.0, "carbs": 8.0, "fat": 12.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "malai_paneer", "name": "Malai Paneer", "calories": 260, "protein": 13.0, "carbs": 6.0, "fat": 21.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "saturday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "kanda_poha", "name": "Kanda Poha", "calories": 270, "protein": 6.0, "carbs": 48.0, "fat": 6.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "onion_uttapa", "name": "Onion Uttapa", "calories": 220, "protein": 6.0, "carbs": 36.0, "fat": 6.0, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "bournvita", "name": "Bournvita", "calories": 120, "protein": 3.0, "carbs": 22.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "saturday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "rooh_afza_sharbat", "name": "Rooh Afza Sharbat", "calories": 80, "protein": 0.0, "carbs": 20.0, "fat": 0.0, "serving_unit": "glass", "serving_size": 1.0 },
+      { "id": "shev_bhaji", "name": "Shev Bhaji", "calories": 180, "protein": 5.0, "carbs": 20.0, "fat": 9.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "veg_rajwadi", "name": "Veg Rajwadi", "calories": 180, "protein": 5.0, "carbs": 22.0, "fat": 8.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "moong_dal_rice", "name": "Moong Dal Rice", "calories": 280, "protein": 10.0, "carbs": 50.0, "fat": 4.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "jalebi", "name": "Jalebi", "calories": 200, "protein": 2.0, "carbs": 40.0, "fat": 5.0, "serving_unit": "piece", "serving_size": 2.0 },
+      { "id": "papad", "name": "Papad", "calories": 35, "protein": 2.0, "carbs": 6.0, "fat": 0.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "aloo_palak", "name": "Aloo Palak", "calories": 160, "protein": 5.0, "carbs": 22.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "hot_dog", "name": "Hot Dog", "calories": 280, "protein": 10.0, "carbs": 30.0, "fat": 14.0, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "chole", "name": "Chole", "calories": 200, "protein": 10.0, "carbs": 28.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "saturday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "khajoor_rabdi", "name": "Khajoor Rabdi", "calories": 220, "protein": 5.0, "carbs": 35.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "shrikhand", "name": "Shrikhand", "calories": 200, "protein": 6.0, "carbs": 32.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "dal_fry", "name": "Dal Fry", "calories": 140, "protein": 8.0, "carbs": 18.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "jeera_rice", "name": "Jeera Rice", "calories": 250, "protein": 4.0, "carbs": 48.0, "fat": 5.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "aloo_palak", "name": "Aloo Palak", "calories": 160, "protein": 5.0, "carbs": 22.0, "fat": 6.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "sunday",
+    "meal_type": "breakfast",
+    "items": [
+      { "id": "bread_butter_jam", "name": "Bread Butter Jam", "calories": 220, "protein": 5.0, "carbs": 36.0, "fat": 7.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "veg_sandwich", "name": "Veg Sandwich", "calories": 240, "protein": 7.0, "carbs": 36.0, "fat": 8.0, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "poha_sev", "name": "Poha / Sev", "calories": 260, "protein": 6.0, "carbs": 46.0, "fat": 6.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chocos", "name": "Chocos", "calories": 180, "protein": 4.0, "carbs": 34.0, "fat": 3.0, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "tea_milk_fruits", "name": "Tea / Milk / Fruits", "calories": 100, "protein": 3.0, "carbs": 15.0, "fat": 2.0, "serving_unit": "cup", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "sunday",
+    "meal_type": "lunch",
+    "items": [
+      { "id": "paneer_mutter", "name": "Paneer Mutter", "calories": 230, "protein": 13.0, "carbs": 14.0, "fat": 14.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "athwa_masoor", "name": "Athwa Masoor", "calories": 150, "protein": 9.0, "carbs": 20.0, "fat": 3.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "jeera_rice", "name": "Jeera Rice", "calories": 250, "protein": 4.0, "carbs": 48.0, "fat": 5.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "mathur_milan", "name": "Mathur Milan", "calories": 200, "protein": 5.0, "carbs": 30.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "papdi_chaat", "name": "Papdi Chaat", "calories": 220, "protein": 6.0, "carbs": 32.0, "fat": 8.0, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "baingan_masala", "name": "Baingan Masala", "calories": 120, "protein": 3.0, "carbs": 12.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "moongdal_khichadi", "name": "Moong Dal Khichadi", "calories": 280, "protein": 10.0, "carbs": 48.0, "fat": 4.0, "serving_unit": "plate", "serving_size": 1.0 }
+    ]
+  },
+  {
+    "week_number": 2,
+    "day_of_week": "sunday",
+    "meal_type": "dinner",
+    "items": [
+      { "id": "green_salad", "name": "Green Salad", "calories": 40, "protein": 2.0, "carbs": 7.0, "fat": 0.5, "serving_unit": "bowl", "serving_size": 1.0 },
+      { "id": "pickle_achaar", "name": "Pickle / Achaar", "calories": 20, "protein": 0.0, "carbs": 2.0, "fat": 1.5, "serving_unit": "tsp", "serving_size": 1.0 },
+      { "id": "papad", "name": "Papad", "calories": 35, "protein": 2.0, "carbs": 6.0, "fat": 0.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "sevai_kheer", "name": "Sevai Kheer", "calories": 220, "protein": 6.0, "carbs": 38.0, "fat": 5.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "chapati_roti", "name": "Chapati / Roti", "calories": 120, "protein": 3.5, "carbs": 22.0, "fat": 2.5, "serving_unit": "piece", "serving_size": 1.0 },
+      { "id": "steamed_rice", "name": "Steamed Rice", "calories": 200, "protein": 4.0, "carbs": 44.0, "fat": 0.5, "serving_unit": "plate", "serving_size": 1.0 },
+      { "id": "green_moong_masala", "name": "Green Moong Masala", "calories": 150, "protein": 9.0, "carbs": 20.0, "fat": 3.0, "serving_unit": "katori", "serving_size": 1.0 },
+      { "id": "baingan_masala", "name": "Baingan Masala", "calories": 120, "protein": 3.0, "carbs": 12.0, "fat": 7.0, "serving_unit": "katori", "serving_size": 1.0 }
+    ]
+  }
+]
