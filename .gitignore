@@ -30,6 +30,7 @@ DerivedData/
 # Secrets (never commit real credentials)
 Config.xcconfig
 *.xcconfig
+Services/SupabaseManager.swift
 
 # CocoaPods (not used, but just in case)
 Pods/
