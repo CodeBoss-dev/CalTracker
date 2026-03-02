@@ -98,12 +98,9 @@ final class GoalsService: ObservableObject {
     private func saveToSupabase() async {
         do {
             let session = try await client.auth.session
-            // Delete then re-insert (simple upsert; schema has no unique constraint on user_id alone)
-            try await client
-                .from("user_goals")
-                .delete()
-                .eq("user_id", value: session.user.id.uuidString)
-                .execute()
+            // Upsert on user_id — requires a unique constraint on user_id in the user_goals table.
+            // Run in Supabase SQL editor:
+            //   ALTER TABLE user_goals ADD CONSTRAINT user_goals_user_id_key UNIQUE (user_id);
             let insert = UserGoalsInsert(
                 userId:        session.user.id.uuidString,
                 dailyCalories: goals.dailyCalories,
@@ -111,7 +108,10 @@ final class GoalsService: ObservableObject {
                 carbsTarget:   goals.carbsTarget,
                 fatTarget:     goals.fatTarget
             )
-            try await client.from("user_goals").insert(insert).execute()
+            try await client
+                .from("user_goals")
+                .upsert(insert, onConflict: "user_id")
+                .execute()
         } catch {
             // Network error — change is already persisted locally
         }

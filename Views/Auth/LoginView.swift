@@ -9,7 +9,10 @@ struct LoginView: View {
     @State private var errorMessage: String?
     @State private var showSignUp = false
 
-    // Rate limiting: lock out after 5 consecutive failures
+    // Client-side rate limiting: lock out after 5 consecutive failures.
+    // This is a UX safeguard only — also enable server-side rate limiting in
+    // Supabase Dashboard → Authentication → Rate Limits to protect against
+    // direct API attacks that bypass this client state.
     @State private var failureCount = 0
     @State private var lockoutUntil: Date?
     private let maxFailures = 5

@@ -28,7 +28,8 @@ DerivedData/
 .swiftpm/
 
 # Secrets (never commit real credentials)
-# SupabaseManager.swift already uses placeholder values — keep it that way
+Config.xcconfig
+*.xcconfig
 
 # CocoaPods (not used, but just in case)
 Pods/

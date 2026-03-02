@@ -165,8 +165,9 @@ struct SignUpView: View {
 
     private func signUpErrorMessage(for error: Error) -> String {
         let msg = error.localizedDescription.lowercased()
+        // Use a generic message for email-exists errors to prevent account enumeration.
         if msg.contains("already registered") || msg.contains("already in use") || msg.contains("user already exists") {
-            return "An account with this email already exists. Try signing in."
+            return "If this email is available, you'll receive a confirmation link shortly."
         } else if msg.contains("invalid email") || msg.contains("valid email") {
             return "Please enter a valid email address."
         } else if msg.contains("password") && (msg.contains("weak") || msg.contains("short")) {
